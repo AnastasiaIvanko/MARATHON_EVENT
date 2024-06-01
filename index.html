@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Event 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(90deg, #193831, #3f90a0);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: slideInDown 1s ease-in-out;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #3f90a0, #193831);
+            bottom: 0;
+            left: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-grow: 1;
+        }
+        .info, .map, .register {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background: #fff;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .info:hover, .map:hover, .register:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .info, .map {
+            flex: 2;
+        }
+        h2 {
+            color: #193831;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 1.8em;
+            border-bottom: 2px solid #3f90a0;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #3f90a0;
+            margin-top: 20px;
+            font-size: 1.4em;
+        }
+        .map img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .register form {
+            display: flex;
+            flex-direction: column;
+        }
+        .register form input, .register form button {
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        .register form input:focus, .register form button:focus {
+            outline: none;
+            border-color: #193831;
+            box-shadow: 0 0 5px rgba(25, 56, 49, 0.5);
+        }
+        .register form button {
+            background-color: #3f90a0;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .register form button:hover {
+            background-color: #193831;
+            transform: translateY(-5px);
+        }
+        footer {
+            background: linear-gradient(90deg, #193831, #3f90a0);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #3f90a0, #193831);
+            top: 0;
+            left: 0;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .main-content {
+                flex-direction: column;
+            }
+            .info, .map, .register {
+                margin: 10px 0;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 0;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .register form input, .register form button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marathon Event 2024</h1>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <div class="info">
+                <h2>Event Information</h2>
+                <p><strong>Start Time:</strong> June 15, 2024, at 7:00 AM</p>
+                <p><strong>Location:</strong> Central Park, New York City</p>
+                <h3>For Participants</h3>
+                <p>Please arrive at least 1 hour before the start time for registration and warm-up. Ensure you have your participant number and ID with you.</p>
+                <h3>For Spectators</h3>
+                <p>There will be designated areas along the route where spectators can cheer for the runners. Please follow the instructions of the event staff for a safe and enjoyable experience.</p>
+            </div>
+            <div class="map">
+                <h2>Route Map</h2>
+                <img src="./111.png" alt="Marathon Route Map">
+            </div>
+            <div class="register">
+                <h2>Registration</h2>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="age" placeholder="Age" required>
+                    <input type="text" name="gender" placeholder="Gender" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Marathon Event. All rights reserved.</p>
+    </footer>
+</body>
+</html>
